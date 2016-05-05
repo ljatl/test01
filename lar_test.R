@@ -1,0 +1,11 @@
+require(lars)
+data(diabetes)
+par(mfrow=c(2,2))
+attach(diabetes)
+object <- lars(x,y)
+plot(object)
+object2 <- lars(x,y,type="lar")
+plot(object2)
+object3 <- lars(x,y,type="for") # Can use abbreviations
+plot(object3)
+detach(diabetes)
